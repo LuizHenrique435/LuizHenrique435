@@ -1,3 +1,5 @@
+[![Typing SVG](https://readme-typing-svg.herokuapp.com/?color=58A6FF&size=30&center=true&vCenter=true&width=600&lines=Welcome+to+my+GitHub!;Software+Developer;Always+learning+new+things)](https://git.io/typing-svg)
+
 # 👋 Hello World, I'm Luiz Henrique
 
 💻 Software Developer | Technology Enthusiast  
@@ -18,6 +20,10 @@
 ![Skills](https://skillicons.dev/icons?i=react,html,css,sass,tailwind,bootstrap,figma,git,js,ts,java,py,nodejs,linux,ubuntu,vim,firebase,mysql,postgres,express,vercel,vite,aws)
 
 ---
+
+
+![](https://komarev.com/ghpvc/?username=LuizHenrique435&color=blue)
+![GitHub Streak](https://streak-stats.demolab.com?user=LuizHenrique435&theme=tokyonight)
 
 # 📊 GitHub Stats
 
