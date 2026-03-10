@@ -27,14 +27,13 @@
 
 # 📊 GitHub Stats
 
-![Luiz GitHub stats](https://github-readme-stats.vercel.app/api?username=LuizHenrique435&show_icons=true&theme=tokyonight)
+![Luiz GitHub stats](https://github-readme-stats.vercel.app/api?username=LuizHenrique435&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true)
 
 ---
 
 # 📈 Most Used Languages
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=LuizHenrique435&layout=compact&theme=tokyonight)
-
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=LuizHenrique435&layout=compact&theme=tokyonight&langs_count=8)
 ---
 
 ⭐ Always learning and building new things.
