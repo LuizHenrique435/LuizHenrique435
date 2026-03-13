@@ -45,12 +45,12 @@
 
 ###
 
-[![trophy](https://github-profile-trophy.vercel.app/?username=felipereira10&theme=onedark)](https://github.com/felipereira10/github-profile-trophy)
+[![trophy](https://github-profile-trophy.vercel.app/?username=LuizHenrique435&theme=onedark)](https://github.com/LuizHenrique435/github-profile-trophy)
 
 ###
 
  <h2 align="left"> Git Activity Timeline </h2>
 
-  ![GitHub Metrics](https://raw.githubusercontent.com/felipereira10/felipereira10/main/metrics.svg)
+  ![GitHub Metrics](https://raw.githubusercontent.com/LuizHenrique435/LuizHenrique435/main/metrics.svg)
 
 ⭐ Always learning and building new things.
