@@ -36,6 +36,21 @@
 # 📈 Most Used Languages
 
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=LuizHenrique435&layout=compact&theme=tokyonight&langs_count=8)
+
 ---
+
+###
+
+<h2 align="left">Parameters</h2>
+
+###
+
+[![trophy](https://github-profile-trophy.vercel.app/?username=felipereira10&theme=onedark)](https://github.com/felipereira10/github-profile-trophy)
+
+###
+
+ <h2 align="left"> Git Activity Timeline </h2>
+
+  ![GitHub Metrics](https://raw.githubusercontent.com/felipereira10/felipereira10/main/metrics.svg)
 
 ⭐ Always learning and building new things.
