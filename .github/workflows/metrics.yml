@@ -1,27 +1,8 @@
-Skip to content
-LuizHenrique435
-LuizHenrique435
-Repository navigation
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-Settings
-Metrics
-Metrics #232
-All jobs
-Run details
-Workflow file for this run
-.github/workflows/metrics.yml at 911c020
 name: Metrics
 on:
   schedule:
-    - cron: "0 0 * * *"  # roda todo dia às 00:00
-  workflow_dispatch:      # permite rodar manualmente também
+    - cron: "0 0 * * *"  # Roda todo dia às 00:00
+  workflow_dispatch:      # Permite rodar manualmente
 
 jobs:
   build:
@@ -34,12 +15,8 @@ jobs:
           template: classic
           base: isocalendar
           config_timezone: America/Sao_Paulo
-          # plugin_languages: yes
-          # plugin_languages_indepth: no
-          # plugin_languages_threshold: 2%
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
-          # plugin_anilist_sections: favorites, characters
           committer_token: ${{ secrets.METRICS_TOKEN }}
           output_action: commit
           output: metrics.svg
@@ -50,15 +27,3 @@ jobs:
             h2 {
               display: none;
             }
-Footer
-©️ 2026 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Community
-Docs
-Contact
-Manage cookies
-Do not share my personal information
