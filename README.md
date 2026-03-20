@@ -17,7 +17,7 @@
 
 # 💻 Technologies & Tools
 
-![Skills](https://skillicons.dev/icons?i=react,html,css,sass,tailwind,bootstrap,figma,git,js,ts,java,py,nodejs,linux,ubuntu,vim,firebase,mysql,postgres,express,vercel,vite,aws)
+![Skills](https://skillicons.dev/icons?i=react,html,css,tailwind,bootstrap,figma,git,js,ts,java,py,nodejs,linux,ubuntu,vim,firebase,mysql,postgres,wordpress,vite,aws)
 
 ---
 
