@@ -39,12 +39,6 @@
 
 ---
 
-###
-
-<h2 align="left">Parameters</h2>
-
-###
-
  <h2 align="left"> Git Activity Timeline </h2>
 
   ![GitHub Metrics](https://raw.githubusercontent.com/LuizHenrique435/LuizHenrique435/main/metrics.svg)
