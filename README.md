@@ -22,7 +22,7 @@
 ---
 
 
-![](https://komarev.com/ghpvc/?username=LuizHenrique435&color=blue)
+
 
 ![GitHub Streak](https://streak-stats.demolab.com?user=LuizHenrique435&theme=tokyonight)
 
