@@ -25,5 +25,8 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh pr create --title "Auto Upgrade" --body "Subindo nível das medalhas"
-          gh pr merge --merge --auto
+          # Cria o PR e guarda o link
+          PR_URL=$(gh pr create --title "Auto Upgrade" --body "Subindo nível das medalhas")
+          # Mescla o PR imediatamente usando o link
+          gh pr merge $PR_URL --merge --admin
+
