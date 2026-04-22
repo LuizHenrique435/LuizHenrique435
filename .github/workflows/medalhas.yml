@@ -10,14 +10,16 @@ jobs:
 
       - name: Criar alteração e Branch
         run: |
-          git config --global user.name "GitHub Action"
-          git config --global user.email "action@github.com"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@://github.com"
           git checkout -b "subir-nivel-${{ github.run_id }}"
           echo "Update: $(date)" >> progresso.txt
           git add progresso.txt
           git commit -m "Upgrade medalhas
           
           Co-authored-by: GitHub <noreply@github.com>"
+          git push origin "subir-nivel-${{ github.run_id }}" # Adicionei o push aqui
+
 
       - name: Abrir e Mesclar PR
         env:
