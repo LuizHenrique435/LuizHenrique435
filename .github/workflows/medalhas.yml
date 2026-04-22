@@ -28,5 +28,5 @@ jobs:
           # Cria o PR e guarda o link
           PR_URL=$(gh pr create --title "Auto Upgrade" --body "Subindo nível das medalhas")
           # Mescla o PR imediatamente usando o link
-          gh pr merge $PR_URL --merge --admin
+          gh pr merge $PR_URL --merge --admin --delete-branch
 
