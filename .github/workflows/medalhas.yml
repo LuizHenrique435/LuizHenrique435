@@ -5,32 +5,44 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
 
       - name: Criar alteração e Branch
+        env:
+          MY_EMAIL: "henriquesouzasilva80@gmail.com"
+          MY_NAME: "LuizHenrique435"
         run: |
-          git config --global user.name "LuizHenrique435"
-          git config --global user.email "henriquesouzasilva80@gmail.com"
+          # Configura sua identidade oficial
+          git config --global user.name "$MY_NAME"
+          git config --global user.email "$MY_EMAIL"
           
-          # Cria branch única
-          git checkout -b "subir-nivel-${{ github.run_id }}"
+          # Cria branch única para o PR
+          BRANCH_NAME="subir-nivel-${{ github.run_id }}"
+          git checkout -b "$BRANCH_NAME"
           
-          # Altera o arquivo para gerar o commit
+          # Altera o arquivo para gerar atividade
           echo "Update: $(date)" >> progresso.txt
           
           git add progresso.txt
-          git commit -m "Upgrade medalhas
+          
+          # O SEGREDO: Força você como autor e adiciona o coautor
+          git commit --author="$MY_NAME <$MY_EMAIL>" -m "Upgrade medalhas
           
           Co-authored-by: GitHub <noreply@github.com>"
           
-          git push origin "subir-nivel-${{ github.run_id }}"
+          git push origin "$BRANCH_NAME"
 
       - name: Abrir e Mesclar PR
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # Cria o PR e guarda o link
+          # Cria o PR e armazena a URL
           PR_URL=$(gh pr create --title "Auto Upgrade" --body "Subindo nível das medalhas")
-          # Mescla o PR imediatamente e deleta a branch
+          # Mescla e limpa a branch
           gh pr merge $PR_URL --merge --admin --delete-branch
