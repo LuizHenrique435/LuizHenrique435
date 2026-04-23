@@ -1,6 +1,6 @@
 name: Subir Nivel Medalhas
 on:
-  workflow_dispatch: # Permite que você rode manualmente com um clique
+  workflow_dispatch:
 
 jobs:
   build:
@@ -10,16 +10,21 @@ jobs:
 
       - name: Criar alteração e Branch
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@://github.com"
+          git config --global user.name "LuizHenrique435"
+          git config --global user.email "henriquesouzasilva80@gmail.com"
+          
+          # Cria branch única
           git checkout -b "subir-nivel-${{ github.run_id }}"
+          
+          # Altera o arquivo para gerar o commit
           echo "Update: $(date)" >> progresso.txt
+          
           git add progresso.txt
           git commit -m "Upgrade medalhas
           
           Co-authored-by: GitHub <noreply@github.com>"
-          git push origin "subir-nivel-${{ github.run_id }}" # Adicionei o push aqui
-
+          
+          git push origin "subir-nivel-${{ github.run_id }}"
 
       - name: Abrir e Mesclar PR
         env:
@@ -27,7 +32,5 @@ jobs:
         run: |
           # Cria o PR e guarda o link
           PR_URL=$(gh pr create --title "Auto Upgrade" --body "Subindo nível das medalhas")
-          # Mescla o PR imediatamente
-          gh pr merge $PR_URL --merge --admin 
-
-
+          # Mescla o PR imediatamente e deleta a branch
+          gh pr merge $PR_URL --merge --admin --delete-branch
