@@ -35,7 +35,7 @@ jobs:
           echo "Update: $(date)" >> progresso.txt
           
           git add progresso.txt
-          git commit -m "Upgrade medalhas - Manual PR -m "Co-authored-by: GitHub <noreply@github.com>"
+          git commit -m "Upgrade medalhas - Manual PR"
           
           # O --force garante que o GitHub aceite a branch nova mesmo que já exista uma lá
           git push origin "$BRANCH_NAME" --force
