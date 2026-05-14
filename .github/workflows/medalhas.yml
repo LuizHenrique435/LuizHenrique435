@@ -7,42 +7,35 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-      pull-requests: write
     steps:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
-      - name: Criar alteração e Branch
+      - name: Criar alteração e Push
         env:
-          MY_EMAIL: "henriquesouzasilva80@gmail.com"
-          MY_NAME: "LuizHenrique435"
+          BOT_EMAIL: "41898282+github-actions[bot]@users.noreply.github.com"
+          BOT_NAME: "github-actions[bot]"
         run: |
-          # Configura sua identidade oficial
-          git config --global user.name "$MY_NAME"
-          git config --global user.email "$MY_EMAIL"
+          git config --global user.name "$BOT_NAME"
+          git config --global user.email "$BOT_EMAIL"
           
-          # Cria branch única para o PR
-          BRANCH_NAME="subir-nivel-${{ github.run_id }}"
+          BRANCH_NAME="feature/melhoria-medalhas"
+          
+          # Garante que estamos na main para criar a branch nova a partir dela
+          git checkout main
+          
+          # Deleta a branch local se ela já existir para evitar lixo de execuções anteriores
+          git branch -D "$BRANCH_NAME" || true
+          
+          # Cria a branch totalmente nova
           git checkout -b "$BRANCH_NAME"
           
-          # Altera o arquivo para gerar atividade
+          # Altera o arquivo
           echo "Update: $(date)" >> progresso.txt
           
           git add progresso.txt
+          git commit -m "Upgrade medalhas - Manual PR"
           
-          # O SEGREDO: Força você como autor e adiciona o coautor
-          git commit --author="$MY_NAME <$MY_EMAIL>" -m "Upgrade medalhas
-          
-          Co-authored-by: GitHub <noreply@github.com>"
-          
-          git push origin "$BRANCH_NAME"
-
-      - name: Abrir e Mesclar PR
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          # Cria o PR e armazena a URL
-          PR_URL=$(gh pr create --title "Auto Upgrade" --body "Subindo nível das medalhas")
-          # Mescla e limpa a branch
-          gh pr merge $PR_URL --merge --admin --delete-branch
+          # O --force garante que o GitHub aceite a branch nova mesmo que já exista uma lá
+          git push origin "$BRANCH_NAME" --force
