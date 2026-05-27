@@ -1,8 +1,8 @@
 name: Metrics
 on:
   schedule:
-    - cron: "0 0 * * *"  # Roda todo dia às 00:00
-  workflow_dispatch:      # Permite rodar manualmente
+    - cron: "17 21 * * *"  # Roda todo dia às 21:17 UTC (18:17 Horário de Brasília)
+  workflow_dispatch:      # Permite rodar manualmente sempre que quiser
 
 jobs:
   build:
