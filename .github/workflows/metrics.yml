@@ -1,7 +1,8 @@
 name: Metrics
 on:
   schedule:
-    - cron: "17 21 * * *"  # Roda todo dia às 21:17 UTC (18:17 Horário de Brasília)
+    - cron: "17 12 * * *"  # Roda às 09:17 (Horário de Brasília)
+    - cron: "23 18 * * *"  # Backup: Roda às 15:23 (Horário de Brasília)
   workflow_dispatch:      # Permite rodar manualmente sempre que quiser
 
 jobs:
